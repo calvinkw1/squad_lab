@@ -1,0 +1,24 @@
+<%= erb :'partials/_header' %>
+
+<form action="/squads/<%= @squad_id %>/students/<%= @student_id %>" method="POST">
+  <input type="hidden" name="_method" value="PUT">
+  <label for="student_name">Student Name: </label>
+  <input type="text" name="student_name" id="student_name" value="<%= @student["student_name"] %>" autofocus>
+
+  <label for="age">Age: </label>
+  <input type="text" name="age" id="age" value="<%= @student["age"] %>">
+
+  <label for="spirit_animal">Spirit Animal: </label>
+  <input type="text" name="spirit_animal" id="spirit_animal" value="<%= @student["spirit_animal"] %>">
+
+  <input type="submit" value="Edit">
+
+  <form action="/squads/<%= @squad_id %>/students/<%= @student_id %>">
+    <input type="hidden" name="_method" value="DELETE">
+    <input type="submit" value="Delete Student">
+  </form>
+</form>
+
+
+
+<%= erb :'partials/_footer' %>

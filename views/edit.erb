@@ -1,0 +1,20 @@
+<%= erb :'partials/_header' %>
+
+<h3>Edit Squad</h3>
+
+<form action="/squads/<%= @squad_id["id"] %>" method="POST">
+  <input type="hidden" name="_method" value="PUT">
+  <label for="name">Name: </label>
+  <input type="text" name="squad_name" id="squad_name" value="<%= @squad_id["squad_name"] %>" autofocus>
+  <br>
+  <label for="name">Mascot: </label>
+  <input type="text" name="mascot" id="mascot" value="<%= @squad_id["mascot"] %>">
+  <input type="submit" value="Edit Squad!">
+</form>
+  <form action="/squads/<%= @squad_id["id"] %>" method="POST">
+    <input type="hidden" name="_method" value="DELETE">
+    <input type="submit" value="Delete Squad">
+  </form>
+
+
+<%= erb :'partials/_footer' %>

@@ -1,0 +1,19 @@
+<%= erb :'partials/_header' %>
+
+<h3>All Squads</h3>
+<% @squads.each do |squad| %>
+  <p>
+    <li><%= squad["squad_name"] %></li>
+      <a href="/squads/<%= squad["id"] %>">Show <%= squad["squad_name"] %></a>
+      <a href="/squads/<%= squad["id"] %>/edit">Edit <%= squad["squad_name"] %></a>
+      <a href="/squads/<%= squad["id"] %>/students">Students of <%= squad["squad_name"] %></a>
+      <a href="/squads/<%= squad["id"] %>/students/new">Add a New Student!</a>
+
+  </p>
+  <% end %>
+  
+  <p>
+  <a href="/squads/new">Add a New Squad!</a>
+  </p>
+
+<%= erb :'partials/_footer' %>

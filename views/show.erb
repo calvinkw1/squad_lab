@@ -1,0 +1,17 @@
+<%= erb :'partials/_header' %>
+
+<h3>Showing Squad </h3>
+
+<p>
+  Squad Name: <%= @squad_id["squad_name"] %>
+</p>
+
+<p>
+  Squad Mascot: <%= @squad_id["mascot"] %>
+</p>
+
+<p>
+  <a href="/squads/<%= @squad_id["id"] %>/students">Squad <%= @squad_id["squad_name"] %> Members</a>
+</p>
+
+<%= erb :'partials/_footer' %>
